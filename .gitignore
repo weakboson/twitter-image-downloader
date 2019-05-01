@@ -1,0 +1,4 @@
+.bundle/*
+!.bundle/config
+
+spec/sample/*
