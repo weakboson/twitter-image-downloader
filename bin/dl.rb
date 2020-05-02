@@ -43,6 +43,8 @@ end
 conn = Faraday.new(url: 'https://pbs.twimg.com')
 
 STDIN.each do |uri|
+  uri.chomp!
+  next if uri.empty?
   img = Twimg.new(uri, connection: conn)
   img.save(directory: "./dl")
   if img.status == 200
