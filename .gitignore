@@ -1,5 +1,7 @@
 .bundle/*
 !.bundle/config
 
-spec/sample/*
+data/*
+!data/.keep
 dl/*
+!dl/.keep
