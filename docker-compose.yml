@@ -1,0 +1,16 @@
+version: "2.0"
+services:
+  ruby:
+    image: ruby:2.7.1-slim-buster
+    volumes:
+    - /etc/group:/etc/group:ro
+    - /etc/passwd:/etc/passwd:ro
+    - .:/app
+    working_dir: /app
+    environment:
+      BUNDLE_PATH: /app/.bundle
+      RUBYOPT: -EUTF-8
+    entrypoint:
+    - bundle
+    - exec
+    - bin/dl.rb
