@@ -1,7 +1,7 @@
 version: "2.0"
 services:
   ruby:
-    image: ruby:2.7.1-slim-buster
+    image: ruby:3.1.0-preview1-slim-bullseye
     volumes:
     - /etc/group:/etc/group:ro
     - /etc/passwd:/etc/passwd:ro
